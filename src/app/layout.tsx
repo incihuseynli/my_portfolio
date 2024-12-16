@@ -8,6 +8,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   style: ["normal"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 export const metadata: Metadata = {
   title: "Inci's Portfolio",
