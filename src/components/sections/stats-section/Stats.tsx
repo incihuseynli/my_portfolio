@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 const Stats = () => {
   const { ref, isInView } = useInView({ threshold: 0.5 });
   const [counts, setCounts] = useState<number[]>(statInfo.map(() => 0));
-
+ 
   useEffect(() => {
     if (!isInView) return;
 
@@ -31,7 +31,7 @@ const Stats = () => {
     });
 
     return () => intervals.forEach((interval) => clearInterval(interval));
-  }, [isInView, statInfo]);
+  }, [isInView]);
 
   return (
     <section 
@@ -48,7 +48,7 @@ const Stats = () => {
           </p>
         </div>
       ))}
-    </section>
+    </section>  
   );
 };
 
