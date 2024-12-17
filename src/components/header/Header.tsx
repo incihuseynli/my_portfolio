@@ -12,7 +12,7 @@ const Header = () => {
     <header className="py-4 flex items-center justify-between ">
         {/* NAME LOGO */}
         <div>
-            <h4 className="text-4xl uppercase font-semibold tracking-wider">Inci.</h4>
+            <h4 className="text-4xl uppercase font-semibold tracking-wider">Inji.</h4>
         </div>
         {/* MENU */}
         <Menu/>

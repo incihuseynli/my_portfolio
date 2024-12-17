@@ -36,14 +36,14 @@ const Stats = () => {
   return (
     <section 
       ref={ref}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center justify-between w-full gap-6 md:gap-0"
+      className="mt-80 lg:mt-0 grid grid-cols-1  lg:grid-cols-3 place-content-center justify-between w-full gap-6 md:gap-0"
     >
       {statInfo.map((stat, index) => (
-        <div key={stat.id} className="flex flex-col items-center">
-          <h4 className="text-6xl font-bold text-[#CBACF9]">
+        <div key={stat.id} className="flex flex-col gap-4 lg:gap-0 items-center mb-20 lg:mb-0">
+          <h4 className="text-9xl lg:text-6xl font-bold text-[#CBACF9]">
             {counts[index]}+
           </h4>
-          <p className="capitalize font-medium text-xl tracking-wide">
+          <p className="capitalize font-medium text-3xl sm:text-4xl lg:text-xl tracking-wide">
             {stat.content}
           </p>
         </div>
