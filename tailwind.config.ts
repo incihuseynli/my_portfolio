@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const colors = require("tailwindcss/colors");
@@ -12,6 +12,22 @@ module.exports = {
   darkMode: ["class", "class"],
   theme: {
   	extend: {
+		screens: {
+			'xs': '545px',
+			// => @media (min-width: 545px) { ... }
+	  
+			'sm': '640px',
+			// => @media (min-width: 640px) { ... }
+	  
+			'md': '768px',
+			// => @media (min-width: 1024px) { ... }
+	  
+			'lg': '1060px',
+			// => @media (min-width: 1280px) { ... }
+	  
+			'xl': '1280px',
+			// => @media (min-width: 1280px) { ... }
+		  },
   		animation: {
   			'spin-slow': 'spin 10s linear infinite'
   		},
@@ -71,8 +87,8 @@ module.exports = {
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
